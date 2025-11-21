@@ -1,0 +1,81 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px;
+}
+
+.social-icons a {
+  font-size: 40px;
+  color: #333;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Animasi hover */
+.social-icons a:hover {
+  transform: scale(1.3) rotate(190deg);
+  color: rgb(255, 255, 255);
+}
+.gift-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.gift-box{
+  animation: bounce 1s infinite;
+  transition: transform 0.6s ease;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+
+
+/* ketika checkbox dicentang */
+#gift-toggle {
+  display: none;
+}
+
+#gift-toggle:checked ~ .gift-box {
+  transform: scale(0);
+}
+
+#gift-toggle:checked ~  {
+  opacity: 1;
+  transform: scale(1.5) ;
+}
+.gift-box img {
+   max-width: 30%;   /* relatif ke layar */
+  height: auto;
+}
+.gift-box {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 10px;  /* atas 0, kiri-kanan auto, bawah 10px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.5s ease, color 0.3s ease;
+}
+.gift-box :hover {
+  transform: scale(3) ;
+  animation: shake 0.5s ease-in-out infinite;
+}
+@keyframes shake {
+   0%  { transform: scale(3) rotate(0deg); }
+  25%  { transform: scale(3) rotate(5deg); }
+  50%  { transform: scale(3) rotate(-5deg); }
+  75%  { transform: scale(3) rotate(5deg); }
+  100% { transform: scale(3) rotate(0deg); }
+}
+

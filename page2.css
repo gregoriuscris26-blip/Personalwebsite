@@ -1,0 +1,44 @@
+/* ===== Reset & Body ===== */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* biar gak ada scroll bar */
+  background: #000; /* fallback hitam kalau iframe gagal load */
+}
+
+/* ===== Fullscreen Canva Embed ===== */
+.cv-container, 
+.cv-frame, 
+.cv-frame iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Back Button (pojok kiri atas) ===== */
+.back-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  text-decoration: none;
+  color: white;
+  background: #ff6600;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.back-btn:hover {
+  background: #e65c00;
+  transform: scale(1.05);
+}

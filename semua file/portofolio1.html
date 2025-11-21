@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Gregorius</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="animasi.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- PAGE 1 -->
+  <header>
+    <div class="gift-container">
+      <a href="page2.html">
+        <img src="Screenshot_2025-08-16_100450-removebg-preview.png" alt="Gift Box" class="gift-box">
+      </a>
+    </div>
+
+    <!-- Ikon Sosmed -->
+    <div class="social-icons">
+      <a href="page2.html" title="More Info"><i class="fa-solid fa-info-circle"></i></a>
+      <a href="https://www.youtube.com/@PurrGT" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+      <a href="https://www.instagram.com/greyyygoo/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      <a href="mailto:gregoriuscris26@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+
+    <h1>Hello 中国大学!</h1>
+    <p>Your Passionate Future Undergraduate</p>
+    <p>您 充满热情的未来大学生</p>
+
+    <nav>
+      <a href="#skills">Skills</a> │
+      <a href="#about">About</a> │
+      <a href="#education">Education</a> │
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+ 
+  <section id="about" class="fade-in"> <h2>About Me</h2> <p>A passionate and goal-oriented st
+  udent from Jakarta,</p> <p> Indonesia, with a strong interest in Chinese culture, language,
+       and technology.</p> <p>I enjoy learning, creating content, </p> <p>and developing projects
+         that combine innovation with empathy. </p> <video src="VID-20250811-WA0009(1).mp4" controls class="my-video">
+
+         </video> <div class="about-right"> <img src="IMG-20250928-WA0020.jpg" alt="Profile Photo"
+           class="profile-photo"> </div> </section>
+
+
+    <section id="education" class="fade-in">
+      <h2>Education</h2>
+      <ul>
+        <li>
+          SMA Ricci 1 - Kurikulum Merdeka (2023–2025)
+        </li>
+         <li>
+          Big Achievment:
+        </li>
+         <li>
+         Average Academic 90+ 
+        </li>
+         <li>
+          Winner 1st National Short Film Competition 2025 (ACFFEST 2025)    
+        </li>
+         <li>
+          Winner 1st National Short Film Competition 2025 (Confucius Institute)
+        </li>
+         <li>
+          Winner 1st School Short Film Competition 2025 (SMANDU GENEWA CUP)
+        </li>
+      </ul>
+      <video src="studyvlog.mp4" controls class="my-video"></video>
+      <div class="about-right"> <img src="foto achievment.png" alt="Profile Photo"
+           class="profile-photo"> </div> </section>
+    </section>
+
+    <section id="skills" class="fade-in">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML, CSS</li>
+        <li>Python</li>
+        <li>Editing Software</li>
+
+      </ul>
+      <video src="studyvlog.mp4" controls class="my-video1"></video>
+
+    </section>
+
+    <section id="contact" class="fade-in">
+      <h2>Contact</h2>
+      <p>Email: gregoriuscris26@gmail.com</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Gregorius</p>
+  </footer>
+
+  <!-- JS untuk animasi scroll -->
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
