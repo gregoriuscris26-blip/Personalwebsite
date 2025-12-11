@@ -250,8 +250,6 @@
         margin-top: 0;
     }
     }
-<<<<<<< HEAD
-=======
     /* ==== FIX LAYOUT MOBILE TOTAL ==== */
 @media (max-width: 768px) {
 
@@ -294,4 +292,3 @@
         overflow-x: hidden;
     }
 }
->>>>>>> 7cacdad (Update CSS responsive + lanyard)
