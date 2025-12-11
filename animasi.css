@@ -79,3 +79,98 @@ body {
   100% { transform: scale(3) rotate(0deg); }
 }
 
+/* === Cyberpunk Typing Effect === */
+.cyber-typing {
+  font-family: 'Courier New', monospace;
+  font-size: 32px;
+  color: #00eaff;
+  text-shadow: 0 0 8px #00eaff;
+  width: fit-content;
+  margin: 20px auto 0;
+  border-right: 3px solid #00eaff;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: cursorBlink 0.8s infinite;
+}
+
+.cyber-typing .text {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 3px solid #00eaff;
+  animation: typing 3.5s steps(30) forwards;
+}
+
+/* typing animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* blinking cursor */
+@keyframes cursorBlink {
+  0% { border-color: transparent; }
+  50% { border-color: #39a4ae; }
+  100% { border-color: transparent; }
+}
+/* Lanyard container */
+.lanyard {
+  position: absolute;
+  top: 10px;
+  left: 100px;
+  transform: translateX(-50%);
+  animation: drop 1s ease-out forwards;
+  transform-origin: top center;
+  z-index: 999;
+}
+
+/* Strap / tali */
+.lanyard .strap {
+  width: 8px;
+  height: 80px;
+  background: linear-gradient(180deg, #222, #444);
+  margin: 0 auto;
+  border-radius: 3px;
+}
+
+/* Card */
+.lanyard .card {
+  width: 110px;
+  height: 150px;
+  background: white;
+  border-radius: 10px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+  transform-origin: top center;
+  transition: transform 0.2s ease;
+  animation: sway 3s ease-in-out infinite;
+}
+
+.lanyard .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Klik = elastis */
+.lanyard .card:active {
+  transform: rotate(0deg) scale(0.92);
+}
+
+/* Masuk dari atas */
+@keyframes drop {
+  from { transform: translateX(-50%) translateY(-120px); }
+  to   { transform: translateX(-50%) translateY(0); }
+}
+
+/* Goyang pelan */
+@keyframes sway {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(5deg); }
+  50%  { transform: rotate(0deg); }
+  75%  { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}

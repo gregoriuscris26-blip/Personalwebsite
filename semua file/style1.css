@@ -97,7 +97,7 @@
     main, footer {
         background: url("RETROWAVE 20.gif");  /* Sudah ada, tapi inherit dari body jika perlu */
         padding: 60px 20px;
-        min-height: 100vh;  /* Fix: Full height, no gap putih */
+        
     }
 
     /* SECTION UMUM (Gabung semua duplikat section) */
@@ -108,7 +108,7 @@
         text-align: left;   /* Dari salah satu asli; ubah ke center jika perlu */
     
         position: relative;
-        min-height: 100vh;  /* Fix: Full height */
+        padding: 60px 20px; /* Fix: Full height */
     }
 
     /* FOOTER */
@@ -159,8 +159,8 @@
 
     .my-video1 {
         width: 100%;
-        max-width: 800px;
-        height: 400px;
+        max-width: 350px;
+        height: 620px;
         border: 3px solid #00f7ff;  /* Dari asli */
         border-radius: 15px;        /* Gabung: 15px atau 50%? Saya pilih 15px untuk konsisten, tapi ubah jika perlu */
         box-shadow: 
@@ -216,7 +216,17 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     transform: translateY(-400px) translateX(100px); /* Naik 400px & geser kanan 50px */
     }
-
+    
+    .profile-photo1 {
+    width: 800px;
+    height: 620px;
+    border-radius: 15px;
+    border: 3px solid cyan;
+    box-shadow: 0 0 25px cyan;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: translateY(-620px) translateX(100px); /* Naik 400px & geser kanan 50px */
+    }
 
     .profile-photo:hover {
     transform: translateY(-400px) translateX(100px) scale(1.05); /* tetap naik + efek hover */
@@ -240,3 +250,4 @@
         margin-top: 0;
     }
     }
+

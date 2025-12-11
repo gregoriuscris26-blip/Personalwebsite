@@ -250,3 +250,48 @@
         margin-top: 0;
     }
     }
+<<<<<<< HEAD
+=======
+    /* ==== FIX LAYOUT MOBILE TOTAL ==== */
+@media (max-width: 768px) {
+
+    /* Atur ulang layout flex */
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        padding: 30px 20px;
+    }
+
+    /* Foto profile supaya tidak hancur */
+    .profile-photo,
+    .profile-photo1 {
+        width: 80%;
+        height: auto;
+        transform: none !important;   /* MATIKAN translateX/Y yang bikin hancur */
+        margin: 0 auto;
+    }
+
+    /* Video resize otomatis */
+    .my-video,
+    .my-video1 {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Header tulisan biar tidak terlalu besar */
+    header h1 {
+        font-size: 40px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    /* Pastikan tidak ada overflow ke kanan */
+    body, html {
+        overflow-x: hidden;
+    }
+}
+>>>>>>> 7cacdad (Update CSS responsive + lanyard)
